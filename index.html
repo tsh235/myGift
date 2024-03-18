@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Gift - Сервис поздравительных открыток</title>
+  <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="preload" href="./fonts/nunito-v26-cyrillic_latin-regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/nunito-v26-cyrillic_latin-700.woff2" as="font" crossorigin>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  <script defer src="https://unpkg.com/imask"></script>
+  <script defer src="./js/script.js"></script>
+</head>
+<body class="body body_gift">
+  
+  <header class="header">
+    <div class="container">
+      <img class="header__logo" src="./img/logo.svg" alt="Логотип сервиса My Gift" width="180" height="48">
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="gift">
+      <div class="container">
+        <h1 class="title gift__title">Поздравьте близкого человека с праздником!</h1>
+        <p class="description gift__description">Выберите открытку и получатель получит ее на свой телефон</p>
+
+        <div class="gift__wrapper">
+          <div class="gift__card">
+            <div class="swiper gift__swiper gift__swiper_card">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide gift__card-slide"><img class="gift__card-img" src="./img/card-1.jpg" alt="Открытка №1" data-card="card-1"></div>
+                <div class="swiper-slide gift__card-slide"><img class="gift__card-img" src="./img/card-2.jpg" alt="Открытка №2" data-card="card-2"></div>
+                <div class="swiper-slide gift__card-slide"><img class="gift__card-img" src="./img/card-3.jpg" alt="Открытка №3" data-card="card-3"></div>
+                <div class="swiper-slide gift__card-slide"><img class="gift__card-img" src="./img/card-4.jpg" alt="Открытка №4" data-card="card-4"></div>
+                <div class="swiper-slide gift__card-slide"><img class="gift__card-img" src="./img/card-5.jpg" alt="Открытка №5" data-card="card-5"></div>
+              </div>
+            </div>
+
+            <div class="swiper gift__swiper gift__swiper_thumb">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide gift__card-thumb"><img class="gift__card-img" src="./img/card-1.jpg" alt="Открытка №1"></div>
+                <div class="swiper-slide gift__card-thumb"><img class="gift__card-img" src="./img/card-2.jpg" alt="Открытка №2"></div>
+                <div class="swiper-slide gift__card-thumb"><img class="gift__card-img" src="./img/card-3.jpg" alt="Открытка №3"></div>
+                <div class="swiper-slide gift__card-thumb"><img class="gift__card-img" src="./img/card-4.jpg" alt="Открытка №4"></div>
+                <div class="swiper-slide gift__card-thumb"><img class="gift__card-img" src="./img/card-5.jpg" alt="Открытка №5"></div>
+              </div>
+            </div>
+          </div>
+
+          <form class="gift__form form">
+            <label class="form__label">
+              <span class="form__label-text">от кого</span>
+              <input class="form__field" type="text" name="sender_name">
+            </label>
+
+            <label class="form__label">
+              <span class="form__label-text">телефон отправителя</span>
+              <input class="form__field form__field_phone" type="text" name="sender_phone">
+            </label>
+
+            <label class="form__label">
+              <span class="form__label-text">кому</span>
+              <input class="form__field" type="text" name="reciever_name">
+            </label>
+
+            <label class="form__label">
+              <span class="form__label-text">телефон получателя</span>
+              <input class="form__field form__field_phone" type="text" name="reciever_phone">
+            </label>
+
+            <label class="form__label form__label_textarea">
+              <span class="form__label-text">поздравительный текст</span>
+              <textarea class="form__field form__field_textarea" name="message" placeholder="Напишите теплые слова"></textarea>
+            </label>
+
+            <input class="form__card" name="card" type="hidden">
+
+            <button class="form__btn" type="submit" disabled>Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
