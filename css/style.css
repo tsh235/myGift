@@ -303,7 +303,7 @@ h1, h2, h3, p {
   font-size: 20px;
 }
 
-@media (width <= 1439px) {
+@media (max-width: 1439px) {
   .header {
     padding: 32px 0 16px;
   }
@@ -320,7 +320,7 @@ h1, h2, h3, p {
   }
 }
 
-@media (width <= 1140px) {
+@media (max-width: 1140px) {
   .gift {
     padding-bottom: 34px;
   }
@@ -349,7 +349,7 @@ h1, h2, h3, p {
   }
 }
 
-@media (width <= 860px) {
+@media (max-width: 860px) {
   .gift__wrapper {
     flex-direction: column;
     gap: 50px;
@@ -368,7 +368,7 @@ h1, h2, h3, p {
   }
 }
 
-@media (width <= 580px) {
+@media (max-width: 580px) {
   .container {
     padding: 0 16px;
   }
@@ -407,7 +407,7 @@ h1, h2, h3, p {
   }
 }
 
-@media (width <= 380px) {
+@media (max-width: 380px) {
   .form {
     grid-template-columns: 1fr;
   }
